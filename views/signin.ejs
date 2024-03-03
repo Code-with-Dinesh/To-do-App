@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .parent{
+            height: 100vh;
+            width: 100vw;
+            background-color: slategrey;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-boxb;
+        }
+        .child{
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            height: auto;
+            background-color: white; 
+            border-radius: 15px;
+            font-family: cursive;
+            flex-direction: column;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            padding: 6px 8px;
+            border-radius: 7px;
+            border: 1px solid black;
+            margin: 3px;
+        }
+        .btn{
+            background-color: red;
+            color: black;
+            cursor: pointer;
+            margin-top: 7px;
+            font-size: 19px;
+        }
+    </style>
+</head>
+<body>
+       <div class="parent">
+        <div class="child">
+            <h2>To Do Sign In</h2>
+            <form action="/register" class="form" method="post">
+                <label for="username">Name</label>
+                <input type="text" name="username" required placeholder="Enter username">
+                <label for="FullName">FullName</label>
+                <input type="text" name="fullname" required placeholder="Enter FullName">
+                <label for="email">Email</label>
+                <input type="email" name="email" required placeholder="Enter Email">
+                <label for="password">password</label>
+                <input type="password" name="password" required placeholder="Enter password">
+                <input type="submit" value="Sign In " class="btn">
+            </form>
+        </div>
+       </div>
+</body>
+</html>
