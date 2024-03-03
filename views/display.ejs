@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos</title>
+</head>
+<body>
+    <h1>Display page</h1>
+    <p>@<%=userdata.username %></p>
+    <ul>
+    <% userdata.posts.forEach(function(data) { %>
+        <li><%= data.desc %></li>
+         <form action="/distroy/<%=data._id%>">
+            <button>Destroy</button>
+        </form>
+      <% }) %>
+    </ul>
+</body>
+</html> 
+
