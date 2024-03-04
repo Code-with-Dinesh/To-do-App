@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended:false}))
 const path = require("path")
 app.use(session({
     resave:false,
-    saveUninitialized:false,
+    saveUninitialized:true,
     secret:"Radha Krishan"
 }))
 app.use(passport.initialize())

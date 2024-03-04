@@ -13,21 +13,24 @@
         .parent{
             width: 100vw;
             height: 100vh;
-            background-color: rgb(103, 149, 219);
+            background-color: rgb(175, 197, 232);
             display: flex;
             justify-content: center;
+            align-items: center;
         }
         .child{
             display: flex;
             justify-content: center;
             margin-top: 10px;
             border: 1px solid white;
-            height: 350px;
+            background: linear-gradient(145deg,rgb(202, 110, 110),rgb(76, 190, 76),rgb(207, 207, 77));
+            border-radius: 12px;
+            height: 380px;
             width: 40%;
             align-items: center;
             flex-direction: column;
         }
-        form{
+        .myform{
             display: flex;
             flex-direction: column;
             margin-top: 50px;
@@ -36,6 +39,16 @@
             margin-right: 0px;
             justify-content: center;
             align-items: center;
+        }
+        .myform2{
+            position: relative;
+        }
+        .all{
+            position: absolute;
+            left: 68px;
+            background-color: darkcyan;
+            font-size: 16px;
+            padding: 5px 10px;
         }
         textarea{
             padding: 9px 9px;
@@ -48,8 +61,9 @@
             color: black;
             border-radius: 10px;
             cursor: pointer;
-            padding: 5px 9px;
+            padding: 5px 10px;
             border: none;
+            font-size: 16px;
         }
     </style>
 </head>
@@ -57,12 +71,18 @@
     <div class="parent">
         <div class="child">
             <h2>Welcome To ToDo App</h2>
-            <form action="/show" method="post">
-                <label for="desc">Task</label>
-                <textarea name="desc" id="" cols="20" rows="10"></textarea>
-                <button>Add Task</button>
-            </form>
-            <a href="/login">show</a>
+            <div class="inner">
+
+                <form action="/profile" method="post" class="myform">
+                    <label for="desc">Task</label>
+                    <textarea name="desc" id="" cols="20" rows="10"></textarea>
+                    <button>Add Task</button>
+                </form>
+                <form action="/Todos" method="get" class="myform2">
+                    <button class="all">All Todos</button>
+                </form>
+            </div>
         </div>
+    </div>
 </body>
 </html>
